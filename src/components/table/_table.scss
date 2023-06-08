@@ -1,0 +1,14 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-cell {
+  text-align: left;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+tr:nth-child(even) {
+    background-color: $color-2;
+}
