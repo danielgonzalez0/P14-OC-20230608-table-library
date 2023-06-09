@@ -5,10 +5,42 @@
 
 .table-cell {
   text-align: left;
-  padding: 5px;
+  padding: 8px;
   white-space: nowrap;
 }
 
 tr:nth-child(even) {
-    background-color: $color-2;
+  background-color: $color-2;
+}
+
+thead {
+  height: 50px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 98%;
+    border: solid 1px $color-3;
+  }
+}
+
+.header-cell {
+  color: $color-4;
+  cursor: pointer;
+  &:hover {
+    color: black;
+  }
+  span {
+    display: inline-block;
+    color: $color-3;
+    margin-left: 10px;
+    width: 50px;
+  }
+}
+.order-active {
+  color: black !important;
 }

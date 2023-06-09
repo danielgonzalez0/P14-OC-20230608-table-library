@@ -4,7 +4,7 @@ import data from './mock/data.json';
 
 const App = () => {
   // header – this is the column's name that will be displayed to help identify each column.
-  // accessor – this is the key in our data. This is what will be used to assign each value to a column.
+  // accessor – this is the key in our data object. This is what will be used to assign each value to a column. 
   //type - this the type of our type. This is what will be used to sort and format our data. Available (string, number, date)
   const header = [
     { header: 'First Name', accessor: 'first_name', type: 'string' },
@@ -18,9 +18,13 @@ const App = () => {
     { header: 'Department', accessor: 'department', type: 'string'},
   ];
 
+const dataArray = data
+// array of object. The key must be equal to the accessor value of the header array
+
+
   return (
     <div className="table-container">
-      <Table data={data} header={header} />
+      <Table data={dataArray} header={header} />
     </div>
   );
 };
